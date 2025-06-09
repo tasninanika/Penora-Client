@@ -26,30 +26,26 @@
 ## ✨ Key Features
 
 ### 🔍 For All Visitors
-- 🏠 Home, About, and All Blogs pages
-- 📖 Blog Reading Page with reading progress bar
-- 🏷️ Filter by category, tags, author
-- 🔄 Sort by popularity, comments, or latest
-- 🌗 Toggle Dark / Light Mode
-- 📤 Social Sharing (Facebook, Twitter, Copy Link)
+-  Home, About, and All Blogs pages
+-  Blog Reading Page with reading progress bar
+-  Filter by category, tags, author
+-  Sort by popularity, comments, or latest
+-  Toggle Dark / Light Mode
+-  Social Sharing (Facebook, Twitter, Copy Link)
 
 ### 🔐 For Registered Users
-- ✍️ Write blog with rich text editor + cover image
-- 🖼️ Blog preview mode before publishing
-- 🗃️ Manage own blogs (edit/delete)
-- ❤️ Like and 💬 Comment with edit/delete
-- 📌 Bookmark blogs to read later
-- ⏳ View estimated reading time
-- 🧾 View your comment history & liked blogs
-- 🙍‍♀️ Custom user profile with avatar and bio
+-  Write blog with rich text editor + cover image
+-  Blog preview mode before publishing
+-  Manage own blogs (edit/delete)
+-  Like and 💬 Comment with edit/delete
+-  Bookmark blogs to read later
+-  View estimated reading time
+-  View your comment history & liked blogs
+-  Custom user profile with avatar and bio
 
 ### 🛡️ For Admins
-- 📊 Dashboard with analytics (views, reads, likes, users)
-- 🔎 Manage blogs (edit/delete/approve)
-- 👥 Manage users (ban/unban, promote/demote)
-- 📬 Approve or reject blog submissions
-- 📈 Blog performance insights
-
----
-
-
+-  Dashboard with analytics (views, reads, likes, users)
+-  Manage blogs (edit/delete/approve)
+-  Manage users (ban/unban, promote/demote)
+-  Approve or reject blog submissions
+-  Blog performance insights
