@@ -1,12 +1,55 @@
-# React + Vite
+<h1 align="center">📝 Penora – A Modern Blog Platform</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  A clean, content-focused blogging experience — write, explore, and connect with the world.
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
+  <img src="https://img.shields.io/badge/DaisyUI-FF49DB?style=flat-square"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/React Router-DD0031?style=flat-square&logo=react-router&logoColor=white"/>
+  <img src="https://img.shields.io/badge/AuthProvider-React%20Context-61DAFB?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Context_API-React-61DAFB?style=flat-square&logo=react&logoColor=white" alt="React Context API" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🧾 Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Penora** is a full-featured blog platform frontend designed with performance, clarity, and user engagement in mind. Built using React and Tailwind CSS, Penora provides a seamless interface for reading, writing, managing blogs, and exploring meaningful content.
+
+---
+
+## ✨ Key Features
+
+### 🔍 For All Visitors
+- 🏠 Home, About, and All Blogs pages
+- 📖 Blog Reading Page with reading progress bar
+- 🏷️ Filter by category, tags, author
+- 🔄 Sort by popularity, comments, or latest
+- 🌗 Toggle Dark / Light Mode
+- 📤 Social Sharing (Facebook, Twitter, Copy Link)
+
+### 🔐 For Registered Users
+- ✍️ Write blog with rich text editor + cover image
+- 🖼️ Blog preview mode before publishing
+- 🗃️ Manage own blogs (edit/delete)
+- ❤️ Like and 💬 Comment with edit/delete
+- 📌 Bookmark blogs to read later
+- ⏳ View estimated reading time
+- 🧾 View your comment history & liked blogs
+- 🙍‍♀️ Custom user profile with avatar and bio
+
+### 🛡️ For Admins
+- 📊 Dashboard with analytics (views, reads, likes, users)
+- 🔎 Manage blogs (edit/delete/approve)
+- 👥 Manage users (ban/unban, promote/demote)
+- 📬 Approve or reject blog submissions
+- 📈 Blog performance insights
+
+---
+
+
