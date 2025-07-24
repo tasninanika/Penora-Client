@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow">
+    <nav className="w-11/12 mx-auto">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="font-alegreya text-2xl font-bold text-gray-800">
           Penora
