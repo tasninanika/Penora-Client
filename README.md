@@ -22,7 +22,7 @@
 
 ## 🧾 Overview
 
-**Penora** is a full-featured blog platform frontend designed with performance, clarity, and user engagement in mind. Built using React and Tailwind CSS, Penora provides a seamless interface for reading, writing, managing blogs, and exploring meaningful content.
+**Penora** is a full-featured blog platform frontend designed with performance, clarity, and user engagement in mind. Penora provides a seamless interface for reading, writing, managing blogs, and exploring meaningful content.
 
 ---
 
