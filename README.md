@@ -13,13 +13,16 @@
   <img src="https://img.shields.io/badge/AuthProvider-React%20Context-61DAFB?style=flat-square"/>
   <img src="https://img.shields.io/badge/Context_API-React-61DAFB?style=flat-square&logo=react&logoColor=white" alt="React Context API" />
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
 </p>
 
 ---
 
 ## 🧾 Overview
 
-**Penora** is a full-featured blog platform frontend designed with performance, clarity, and user engagement in mind. Built using React and Tailwind CSS, Penora provides a seamless interface for reading, writing, managing blogs, and exploring meaningful content.
+**Penora** is a full-featured blog platform frontend designed with performance, clarity, and user engagement in mind. Penora provides a seamless interface for reading, writing, managing blogs, and exploring meaningful content.
 
 ---
 
