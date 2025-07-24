@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col mx-auto bg-green-50">
+    <div className="flex flex-col mx-auto bg-[#edf6ee]">
       <Navbar></Navbar>
       <main className="flex-1 container mx-auto px-4 py-6">
         <Outlet />
