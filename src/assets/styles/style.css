@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Rancho&display=swap');
+
+h2{
+    font-family: "Alegreya", serif;
+}
+
+p{
+    font-family: "Rancho", cursive;
+}
+
+.font-rancho{
+    font-family: "Rancho", cursive;
+}
+
+.font-alegreya{
+    font-family: "Alegreya", serif;
+}

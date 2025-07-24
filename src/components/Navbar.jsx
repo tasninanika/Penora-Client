@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-gray-800">
+        <Link to="/" className="font-alegreya text-2xl font-bold text-gray-800">
           Penora
         </Link>
 
