@@ -2,15 +2,15 @@ import { NavLink } from "react-router-dom";
 import Pen from "../assets/images/pen.gif";
 
 const Navbar = () => {
-  const navLinkClasses =
-    "relative group text-gray-800 hover:text-[#1b9c85] text-base";
-  const navUnderline =
-    "absolute left-0 -bottom-5 w-0 h-0.5 bg-[#1b9c85] transition-all duration-300 group-hover:w-full";
+  const navLinkClasses = ({ isActive }) =>
+    `relative group text-base transition-colors duration-300 ${
+      isActive ? "text-[#1b9c85]" : "text-gray-800 hover:text-[#1b9c85]"
+    }`;
 
   return (
     <div className="w-11/12 mx-auto">
       <div className="navbar px-4">
-        {/* Left - Brand */}
+        {/* Left */}
         <div className="navbar-start flex items-center space-x-2">
           <img
             src={Pen}
@@ -25,32 +25,31 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Center - Links */}
+        {/* Center */}
         <div className="navbar-center hidden md:flex space-x-6 font-alegreya">
-          <NavLink to="/" className={navLinkClasses}>
-            Home
-            <span className={navUnderline}></span>
-          </NavLink>
-          <NavLink to="/blogs" className={navLinkClasses}>
-            Blogs
-            <span className={navUnderline}></span>
-          </NavLink>
-          <NavLink to="/about" className={navLinkClasses}>
-            About
-            <span className={navUnderline}></span>
-          </NavLink>
+          {[
+            { name: "Home", path: "/" },
+            { name: "Blogs", path: "/blogs" },
+            { name: "About", path: "/about" },
+          ].map((item) => (
+            <NavLink key={item.name} to={item.path} className={navLinkClasses}>
+              {item.name}
+              <span className="absolute left-0 -bottom-4 w-0 h-[1px] bg-[#1b9c85] transition-all duration-300 group-hover:w-full"></span>
+            </NavLink>
+          ))}
         </div>
 
-        {/* Right - Auth Links */}
+        {/* Right */}
         <div className="navbar-end hidden md:flex space-x-6 font-alegreya">
-          <NavLink to="/signin" className={navLinkClasses}>
-            Sign In
-            <span className={navUnderline}></span>
-          </NavLink>
-          <NavLink to="/signup" className={navLinkClasses}>
-            Sign Up
-            <span className={navUnderline}></span>
-          </NavLink>
+          {[
+            { name: "Sign In", path: "/signin" },
+            { name: "Sign Up", path: "/signup" },
+          ].map((item) => (
+            <NavLink key={item.name} to={item.path} className={navLinkClasses}>
+              {item.name}
+              <span className="absolute left-0 -bottom-4 w-0 h-[1px] bg-[#1b9c85] transition-all duration-300 group-hover:w-full"></span>
+            </NavLink>
+          ))}
         </div>
 
         {/* Mobile Dropdown */}
@@ -82,7 +81,12 @@ const Navbar = () => {
               { name: "Sign Up", path: "/signup" },
             ].map((item) => (
               <li key={item.name}>
-                <NavLink to={item.path} className="hover:text-[#1b9c85]">
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    isActive ? "text-[#1b9c85]" : "hover:text-[#1b9c85]"
+                  }
+                >
                   {item.name}
                 </NavLink>
               </li>
