@@ -15,12 +15,12 @@ const Navbar = () => {
         </div>
 
         {/* Center - Links */}
-        <div className="navbar-center hidden md:flex space-x-6">
+        <div className="navbar-center hidden md:flex space-x-6 font-alegreya">
           {["Home", "Blogs", "About"].map((item) => (
             <Link
               key={item}
               to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
-              className="relative group text-gray-800 hover:text-[#1b9c85] text-sm"
+              className="relative group text-gray-800 hover:text-[#1b9c85] text-base"
             >
               {item}
               <span className="absolute left-0 -bottom-5 w-0 h-0.5 bg-[#1b9c85] transition-all duration-300 group-hover:w-full"></span>
@@ -29,12 +29,12 @@ const Navbar = () => {
         </div>
 
         {/* Right - Auth Links */}
-        <div className="navbar-end hidden md:flex space-x-6">
-          {["Login", "Register"].map((item) => (
+        <div className="navbar-end hidden md:flex space-x-6 font-alegreya">
+          {["Sing In", "Sign Up"].map((item) => (
             <Link
               key={item}
               to={`/${item.toLowerCase()}`}
-              className="relative group text-gray-800 hover:text-[#1b9c85] text-sm"
+              className="relative group text-gray-800 hover:text-[#1b9c85] text-base"
             >
               {item}
               <span className="absolute left-0 -bottom-5 w-0 h-0.5 bg-[#1b9c85] transition-all duration-300 group-hover:w-full"></span>
