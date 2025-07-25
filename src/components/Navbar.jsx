@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Pen from "../assets/images/pen.gif";
 
 const Navbar = () => {
   return (
@@ -6,9 +7,10 @@ const Navbar = () => {
       <div className="navbar px-4">
         {/* Left - Brand */}
         <div className="navbar-start">
+          <img src={Pen} alt="" />
           <Link
             to="/"
-            className="font-alegreya text-2xl font-bold text-gray-800"
+            className="font-alegreya text-2xl font-bold bg-gradient-to-r from-[#1b9c85] to-gray-800 bg-clip-text text-transparent"
           >
             Penora
           </Link>
