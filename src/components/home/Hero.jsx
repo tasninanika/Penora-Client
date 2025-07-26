@@ -12,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="mt-10 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10">
+    <section className="mt-8 flex flex-col-reverse md:flex-row items-center md:justify-between">
       {/* Left Side - Text */}
       <div className="md:w-1/2 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 font-alegreya">
