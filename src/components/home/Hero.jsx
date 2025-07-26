@@ -65,7 +65,7 @@ const Hero = () => {
           <img src={HeroImg} alt="Hero" className="max-w-lg w-full" />
         </motion.div>
       </section>
-      <section className="w-11/12 mx-auto mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center absolute bottom-4">
+      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center absolute lg:bottom-4">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
@@ -73,7 +73,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-[#dbf3df] shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
+            className="bg-[#d2f5d7] shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
           >
             <h2 className="text-4xl font-bold text-[#1b9c85]">
               <CountUp end={stat.value} duration={2} separator="," />
