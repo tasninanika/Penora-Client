@@ -17,7 +17,7 @@ const StatsCounter = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: index * 0.2 }}
           viewport={{ once: true }}
-          className="bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
+          className="bg-[#dbf3df] shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
         >
           <h2 className="text-4xl font-bold text-[#1b9c85]">
             <CountUp end={stat.value} duration={2} separator="," />
