@@ -1,5 +1,6 @@
 import { useState } from "react";
-import HeroGif from "../../assets/images/Blogging.json";
+// import HeroGif from "../../assets/images/Blogging.json";
+import HeroImg from "../../assets/images/hero.png";
 import Lottie from "lottie-react";
 
 const HeroSection = () => {
@@ -11,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="w-11/12 mx-auto mt-10 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10">
+    <section className="mt-10 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10">
       {/* Left Side - Text */}
       <div className="md:w-1/2 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 font-alegreya">
@@ -46,7 +47,8 @@ const HeroSection = () => {
 
       {/* Right Side - Animation */}
       <div className="md:w-1/2 flex justify-center">
-        <Lottie animationData={HeroGif}></Lottie>
+        {/* <Lottie animationData={HeroGif}></Lottie> */}
+        <img src={HeroImg} alt="" />
       </div>
     </section>
   );

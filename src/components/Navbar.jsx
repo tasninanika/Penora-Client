@@ -11,11 +11,11 @@ const Navbar = () => {
     <div className="w-11/12 mx-auto">
       <div className="navbar px-4">
         {/* Left */}
-        <div className="navbar-start flex items-center space-x-2">
+        <div className="navbar-start flex items-center">
           <img
             src={Pen}
             alt="Pen Icon"
-            className="h-14 w-14 object-contain mb-2"
+            className="h-14 w-14 object-contain mb-3"
           />
           <NavLink
             to="/"
