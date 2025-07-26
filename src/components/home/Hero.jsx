@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="mt-8 flex flex-col-reverse md:flex-row items-center md:justify-between">
+    <section className="w-11/12 mx-auto mt-8 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10">
       {/* Left Side - Text */}
       <motion.div
         className="md:w-1/2 text-center md:text-left space-y-6"

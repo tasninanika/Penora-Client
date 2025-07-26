@@ -4,7 +4,7 @@ import StatsCounter from "../components/home/StatsCounter";
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
       <Hero></Hero>
       <StatsCounter></StatsCounter>
     </div>

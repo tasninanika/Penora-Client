@@ -9,7 +9,7 @@ const StatsCounter = () => {
   ];
 
   return (
-    <section className="w-11/12 mx-auto mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+    <section className="w-11/12 mx-auto mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
       {stats.map((stat, index) => (
         <motion.div
           key={index}
