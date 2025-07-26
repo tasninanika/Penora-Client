@@ -1,9 +1,8 @@
 import { useState } from "react";
-// import HeroGif from "../../assets/images/Blogging.json";
+import { motion } from "framer-motion";
 import HeroImg from "../../assets/images/hero.png";
-import Lottie from "lottie-react";
 
-const HeroSection = () => {
+const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e) => {
@@ -14,7 +13,12 @@ const HeroSection = () => {
   return (
     <section className="mt-8 flex flex-col-reverse md:flex-row items-center md:justify-between">
       {/* Left Side - Text */}
-      <div className="md:w-1/2 text-center md:text-left space-y-6">
+      <motion.div
+        className="md:w-1/2 text-center md:text-left space-y-6"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 font-alegreya">
           Discover Amazing <span className="text-[#1b9c85]">Blogs</span> on
           Penora
@@ -43,15 +47,19 @@ const HeroSection = () => {
             Search
           </button>
         </form>
-      </div>
+      </motion.div>
 
-      {/* Right Side - Animation */}
-      <div className="md:w-1/2 flex justify-center">
-        {/* <Lottie animationData={HeroGif}></Lottie> */}
-        <img src={HeroImg} alt="" />
-      </div>
+      {/* Right Side - Image */}
+      <motion.div
+        className="md:w-1/2 flex justify-center"
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <img src={HeroImg} alt="Hero" className="max-w-lg w-full" />
+      </motion.div>
     </section>
   );
 };
 
-export default HeroSection;
+export default Hero;
