@@ -2,7 +2,6 @@ import Slider from "react-slick";
 import Lottie from "lottie-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import BgImg from "../../assets/images/bg.jpg";
 
 import techAnimation from "../../assets/images/technology.json";
 import designAnimation from "../../assets/images/technology.json";
@@ -55,11 +54,7 @@ const Categories = () => {
   };
 
   return (
-    <div className="relative px-16 pb-10 bg-[#fffdef]">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-10"
-        style={{ backgroundImage: `url(${BgImg})` }}
-      ></div>
+    <div className="px-16 pb-10">
       <h2 className="text-4xl font-bold text-gray-800 mb-10 text-center">
         Categories
       </h2>

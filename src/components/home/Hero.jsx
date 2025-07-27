@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <div className="relative bg-[#edf6ee] pb-32">
       {/* Hero Section */}
-      <section className="w-11/12 mx-auto pt-10 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10">
+      <section className="w-11/12 mx-auto pt-10 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10 md:px-10">
         {/* Left Side - Text */}
         <motion.div
           className="md:w-1/2 text-center md:text-left space-y-6"
@@ -70,7 +70,7 @@ const Hero = () => {
       </section>
 
       {/* Stats Counter */}
-      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:-bottom-18 mt-5">
+      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:-bottom-18 md:px-20 mt-10">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
