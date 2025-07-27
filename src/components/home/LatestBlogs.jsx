@@ -35,6 +35,11 @@ const LatestBlogs = () => {
   ];
 
   const categories = ["Technology", "Design", "Lifestyle", "Travel", "Finance"];
+  const suggestedBlogs = [
+    "Mastering Next.js Routing",
+    "10 CSS Tricks You Must Know",
+    "Top 5 AI Tools for Developers",
+  ];
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -56,20 +61,20 @@ const LatestBlogs = () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row h-40"
+              className="border border-green-300 bg-[#edf6ee] rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row h-40"
             >
               {/* Image Left */}
               <img
                 src={blog.image}
                 alt={blog.title}
-                className="w-full md:w-1/3 h-full object-cover"
+                className="w-full md:w-1/3 h-full object-cover p-5 rounded-lg"
               />
               {/* Text Right */}
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                  <h2 className="text-lg font-semibold text-gray-800 mb-1">
                     {blog.title}
-                  </h3>
+                  </h2>
                   <p className="text-gray-500 text-xs mb-2">
                     By {blog.author} • {blog.date}
                   </p>
@@ -85,7 +90,7 @@ const LatestBlogs = () => {
           ))}
         </div>
 
-        {/* Right Side - Single Background Layout */}
+        {/* Right Side */}
         <div className="bg-white shadow-md rounded-xl p-6 space-y-8">
           {/* Categories */}
           <div>
@@ -107,13 +112,16 @@ const LatestBlogs = () => {
             <h3 className="text-xl font-semibold mb-4">
               Subscribe to Newsletter
             </h3>
-            <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
+            <form
+              onSubmit={handleSubscribe}
+              className="flex gap-2 flex-col sm:flex-row"
+            >
               <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="border border-gray-300 rounded-lg px-3 py-2 outline-none focus:border-[#1b9c85]"
+                className="border border-gray-300 rounded-lg px-3 py-2 outline-none focus:border-[#1b9c85] flex-1"
                 required
               />
               <button
@@ -125,14 +133,19 @@ const LatestBlogs = () => {
             </form>
           </div>
 
-          {/* About Paragraph */}
+          {/* Suggested Blogs */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">About Penora</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Penora is a platform where you can explore insightful blogs,
-              connect with writers, and share your own stories with the world.
-              Join our growing community today.
-            </p>
+            <h3 className="text-xl font-semibold mb-4">Suggested Blogs</h3>
+            <ul className="space-y-2">
+              {suggestedBlogs.map((blog, idx) => (
+                <li
+                  key={idx}
+                  className="text-[#1b9c85] cursor-pointer hover:underline"
+                >
+                  {blog}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
