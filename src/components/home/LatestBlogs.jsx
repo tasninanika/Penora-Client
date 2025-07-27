@@ -1,67 +1,140 @@
-import { motion } from "framer-motion";
-import blogImg from "../../assets/images/hero.png";
+import { useState } from "react";
+import BlogImg from "../../assets/images/blog.jpg";
 
 const LatestBlogs = () => {
+  const [email, setEmail] = useState("");
+
   const blogs = [
     {
       id: 1,
-      coverImage: blogImg,
-      title: "Exploring the Beauty of Nature",
-      excerpt:
-        "Nature is an endless source of inspiration and beauty. Let's explore some of the most stunning places around the world...",
+      title: "Understanding React Hooks",
+      author: "John Doe",
+      date: "July 23, 2025",
+      image: BlogImg,
+      description:
+        "A beginner's guide to React Hooks and how they simplify state management in functional components.",
     },
     {
       id: 2,
-      coverImage: blogImg,
-      title: "Top 10 Tips for Writers",
-      excerpt:
-        "Writing is both an art and a skill. Here are 10 tips to help you sharpen your writing and reach a wider audience...",
+      title: "Why TailwindCSS is so Popular?",
+      author: "Jane Smith",
+      date: "July 22, 2025",
+      image: BlogImg,
+      description:
+        "Exploring the rise of TailwindCSS and its utility-first approach to building modern UIs.",
     },
     {
       id: 3,
-      coverImage: blogImg,
-      title: "Technology Trends in 2025",
-      excerpt:
-        "The world of technology is ever-changing. Here’s what you need to know about the latest trends shaping our future...",
+      title: "JavaScript Tips for Beginners",
+      author: "Robert Green",
+      date: "July 20, 2025",
+      image: BlogImg,
+      description:
+        "These 10 tips will help you write cleaner, more efficient JavaScript code.",
     },
   ];
 
+  const categories = ["Technology", "Design", "Lifestyle", "Travel", "Finance"];
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    console.log("Subscribed with email:", email);
+    setEmail("");
+  };
+
   return (
-    <section className="w-11/12 mx-auto mt-20">
+    <section className="w-11/12 mx-auto py-40">
       {/* Section Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
-        Latest <span className="text-[#1b9c85]">Blogs</span>
+      <h2 className="text-3xl font-bold text-gray-800 text-center mb-10">
+        Latest Blogs
       </h2>
 
-      {/* Blog Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogs.map((blog, index) => (
-          <motion.div
-            key={blog.id}
-            className="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={blog.coverImage}
-              alt={blog.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-5">
-              <h3 className="text-xl font-semibold text-gray-800">
-                {blog.title}
-              </h3>
-              <p className="text-gray-600 text-sm mt-2 line-clamp-3">
-                {blog.excerpt}
-              </p>
-              <button className="mt-4 text-[#1b9c85] font-semibold hover:underline">
-                Read More
-              </button>
+      {/* Two-column Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Left Side - Blog Cards */}
+        <div className="lg:col-span-2 space-y-6">
+          {blogs.map((blog) => (
+            <div
+              key={blog.id}
+              className="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row h-40"
+            >
+              {/* Image Left */}
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full md:w-1/3 h-full object-cover"
+              />
+              {/* Text Right */}
+              <div className="p-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-1">
+                    {blog.title}
+                  </h3>
+                  <p className="text-gray-500 text-xs mb-2">
+                    By {blog.author} • {blog.date}
+                  </p>
+                  <p className="text-gray-600 text-xs line-clamp-2">
+                    {blog.description}
+                  </p>
+                </div>
+                <button className="text-[#1b9c85] text-sm font-semibold hover:underline self-start">
+                  Read More
+                </button>
+              </div>
             </div>
-          </motion.div>
-        ))}
+          ))}
+        </div>
+
+        {/* Right Side - Single Background Layout */}
+        <div className="bg-white shadow-md rounded-xl p-6 space-y-8">
+          {/* Categories */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Categories</h3>
+            <div className="flex flex-wrap gap-2">
+              {categories.map((cat, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 bg-[#d1f3d5] text-[#1b9c85] rounded-full text-sm cursor-pointer hover:bg-[#1b9c85] hover:text-white transition"
+                >
+                  #{cat}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Subscribe Newsletter */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">
+              Subscribe to Newsletter
+            </h3>
+            <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border border-gray-300 rounded-lg px-3 py-2 outline-none focus:border-[#1b9c85]"
+                required
+              />
+              <button
+                type="submit"
+                className="bg-[#1b9c85] text-white px-4 py-2 rounded-lg hover:bg-[#15806d] transition"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          {/* About Paragraph */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">About Penora</h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Penora is a platform where you can explore insightful blogs,
+              connect with writers, and share your own stories with the world.
+              Join our growing community today.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
