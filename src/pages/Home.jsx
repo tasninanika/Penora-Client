@@ -1,3 +1,4 @@
+import Categories from "../components/home/Categories";
 import Hero from "../components/home/Hero";
 import LatestBlogs from "../components/home/LatestBlogs";
 
@@ -10,6 +11,7 @@ const Home = () => {
       <div className="bg-white">
         <LatestBlogs />
       </div>
+      <Categories></Categories>
     </div>
   );
 };

@@ -94,7 +94,7 @@ const LatestBlogs = () => {
         <div className="bg-white shadow-md rounded-xl p-6 space-y-8">
           {/* Categories */}
           <div>
-            <h2 className="text-xl font-semibold mb-4">Categories</h2>
+            <h2 className="text-xl font-semibold mb-4">Popular Categories</h2>
             <div className="flex flex-wrap gap-2">
               {categories.map((cat, idx) => (
                 <span
