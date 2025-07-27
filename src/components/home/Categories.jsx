@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import techAnimation from "../../assets/images/technology.json";
-import designAnimation from "../../assets/images/technology.json";
+import designAnimation from "../../assets/images/design.json";
 import lifestyleAnimation from "../../assets/images/technology.json";
 import travelAnimation from "../../assets/images/technology.json";
 import financeAnimation from "../../assets/images/technology.json";
