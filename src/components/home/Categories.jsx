@@ -55,7 +55,7 @@ const Categories = () => {
 
   return (
     <div className="w-11/12 mx-auto pb-10">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+      <h2 className="text-4xl font-bold text-gray-800 mb-10 text-center">
         Categories
       </h2>
       <Slider {...settings}>
