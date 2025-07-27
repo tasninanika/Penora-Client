@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
-import HeroImg from "../../assets/images/hero-image.png";
+import HeroImg from "../../assets/images/hero1.png";
 
 const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -65,12 +65,12 @@ const Hero = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <img src={HeroImg} alt="Hero" className="max-w-xl w-full" />
+          <img src={HeroImg} alt="Hero" className="max-w-lg w-full" />
         </motion.div>
       </section>
 
       {/* Stats Counter */}
-      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:-bottom-20 mt-10">
+      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:-bottom-18">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
@@ -78,7 +78,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-[#d1f3d5] shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
+            className="bg-[#fffdef] shadow-md rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
           >
             <h2 className="text-4xl font-bold text-[#1b9c85]">
               <CountUp end={stat.value} duration={2} separator="," />
