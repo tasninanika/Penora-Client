@@ -5,19 +5,22 @@ import HeroImg from "../../assets/images/hero.png";
 
 const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
+
   const stats = [
     { label: "Total Blogs", value: 1200 },
     { label: "Writers", value: 350 },
     { label: "Categories", value: 25 },
   ];
+
   const handleSearch = (e) => {
     e.preventDefault();
     console.log("Searching for:", searchQuery);
   };
 
   return (
-    <div>
-      <section className="w-11/12 mx-auto mt-8 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10 mb-20 relative">
+    <div className="relative bg-[#edf6ee] pb-32">
+      {/* Hero Section */}
+      <section className="w-11/12 mx-auto pt-10 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10">
         {/* Left Side - Text */}
         <motion.div
           className="md:w-1/2 text-center md:text-left space-y-6"
@@ -65,7 +68,9 @@ const Hero = () => {
           <img src={HeroImg} alt="Hero" className="max-w-lg w-full" />
         </motion.div>
       </section>
-      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center absolute lg:bottom-4">
+
+      {/* Stats Counter */}
+      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center absolute left-1/2 transform -translate-x-1/2 -bottom-16">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
@@ -73,7 +78,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-[#d2f5d7] shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
+            className="bg-white shadow-md rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
           >
             <h2 className="text-4xl font-bold text-[#1b9c85]">
               <CountUp end={stat.value} duration={2} separator="," />
