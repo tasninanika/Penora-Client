@@ -8,7 +8,6 @@ const MainLayout = () => {
       <div className="bg-[#edf6ee]">
         <Navbar />
       </div>
-
       <main className="flex-1">
         <Outlet />
       </main>

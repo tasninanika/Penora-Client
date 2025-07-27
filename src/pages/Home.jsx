@@ -9,7 +9,7 @@ const Home = () => {
       <Hero></Hero>
       <div className="relative">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-12 -z-10"
+          className="absolute inset-0 bg-cover bg-center opacity-10 -z-10"
           style={{ backgroundImage: `url(${BgImg})` }}
         ></div>
         <div className="relative z-10">
