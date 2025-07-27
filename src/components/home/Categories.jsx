@@ -1,19 +1,31 @@
 import Slider from "react-slick";
+import Lottie from "lottie-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import techAnimation from "../../assets/images/technology.json";
+import designAnimation from "../../assets/images/technology.json";
+import lifestyleAnimation from "../../assets/images/technology.json";
+import travelAnimation from "../../assets/images/technology.json";
+import financeAnimation from "../../assets/images/technology.json";
+import healthAnimation from "../../assets/images/technology.json";
+import foodAnimation from "../../assets/images/technology.json";
+import educationAnimation from "../../assets/images/technology.json";
+import aiAnimation from "../../assets/images/technology.json";
+import programmingAnimation from "../../assets/images/technology.json";
+
 const Categories = () => {
   const categories = [
-    "Technology",
-    "Design",
-    "Lifestyle",
-    "Travel",
-    "Finance",
-    "Health",
-    "Food",
-    "Education",
-    "AI",
-    "Programming",
+    { name: "Technology", animation: techAnimation },
+    { name: "Design", animation: designAnimation },
+    { name: "Lifestyle", animation: lifestyleAnimation },
+    { name: "Travel", animation: travelAnimation },
+    { name: "Finance", animation: financeAnimation },
+    { name: "Health", animation: healthAnimation },
+    { name: "Food", animation: foodAnimation },
+    { name: "Education", animation: educationAnimation },
+    { name: "AI", animation: aiAnimation },
+    { name: "Programming", animation: programmingAnimation },
   ];
 
   const settings = {
@@ -42,15 +54,21 @@ const Categories = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto py-10">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+    <div className="w-11/12 mx-auto pb-10">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
         Categories
       </h2>
       <Slider {...settings}>
-        {categories.map((cat, idx) => (
+        {categories.map(({ name, animation }, idx) => (
           <div key={idx} className="px-2">
-            <div className="bg-[#d1f3d5] text-[#1b9c85] rounded-xl py-6 text-center text-lg font-semibold cursor-pointer hover:bg-[#1b9c85] hover:text-white transition-transform transform hover:scale-105 duration-300 shadow-md">
-              {cat}
+            <div className="bg-[#d1f3d5] text-[#1b9c85] rounded-xl py-6 text-center text-lg font-semibold cursor-pointer hover:bg-[#1b9c85] hover:text-white transition-transform transform hover:scale-105 duration-300 shadow-md flex flex-col items-center gap-2">
+              <Lottie
+                animationData={animation}
+                autoplay
+                loop
+                style={{ height: 80, width: 80 }}
+              ></Lottie>
+              <span>{name}</span>
             </div>
           </div>
         ))}

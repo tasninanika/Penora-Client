@@ -48,7 +48,7 @@ const LatestBlogs = () => {
   };
 
   return (
-    <section className="w-11/12 mx-auto py-40">
+    <section className="w-11/12 mx-auto pt-40 pb-24">
       {/* Section Title */}
       <h2 className="text-4xl font-bold text-gray-800 text-center mb-10">
         Latest Blogs
