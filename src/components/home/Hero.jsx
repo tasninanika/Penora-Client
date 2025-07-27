@@ -7,9 +7,9 @@ const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const stats = [
-    { label: "Total Blogs", value: 1200 },
-    { label: "Writers", value: 350 },
-    { label: "Categories", value: 25 },
+    { label: "Total Blogs", value: 1200, bg: "#fffdef" },
+    { label: "Writers", value: 350, bg: "#f0f7ff" },
+    { label: "Categories", value: 25, bg: "#fef6f6" },
   ];
 
   const handleSearch = (e) => {
@@ -78,7 +78,8 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-[#fffdef] shadow-md rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
+            style={{ backgroundColor: stat.bg }}
+            className="shadow-md rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
           >
             <h2 className="text-4xl font-bold text-[#1b9c85]">
               <CountUp end={stat.value} duration={2} separator="," />
