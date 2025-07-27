@@ -61,13 +61,13 @@ const LatestBlogs = () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="border border-green-200 bg-[#f3f8f4] rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row h-40"
+              className="border border-green-200 bg-[#f3f8f4] rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row md:h-40"
             >
               {/* Image Left */}
               <img
                 src={blog.image}
                 alt={blog.title}
-                className="w-full md:w-1/3 h-full object-cover p-5 rounded-lg"
+                className="w-full md:w-1/3 md:h-full object-cover p-5 rounded-lg"
               />
               {/* Text Right */}
               <div className="p-4 flex-1 flex flex-col justify-between">

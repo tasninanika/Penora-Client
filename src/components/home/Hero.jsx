@@ -70,7 +70,7 @@ const Hero = () => {
       </section>
 
       {/* Stats Counter */}
-      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:-bottom-18">
+      <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:-bottom-18 mt-5">
         {stats.map((stat, index) => (
           <motion.div
             key={index}

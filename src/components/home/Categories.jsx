@@ -54,14 +54,14 @@ const Categories = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto pb-10">
+    <div className="px-16 pb-10 bg-[#fffdef]">
       <h2 className="text-4xl font-bold text-gray-800 mb-10 text-center">
         Categories
       </h2>
       <Slider {...settings}>
         {categories.map(({ name, animation }, idx) => (
           <div key={idx} className="px-2">
-            <div className="bg-[#d1f3d5] text-[#1b9c85] rounded-xl py-6 text-center text-lg font-semibold cursor-pointer hover:bg-[#1b9c85] hover:text-white transition-transform transform hover:scale-105 duration-300 shadow-md flex flex-col items-center gap-2">
+            <div className="bg-[#e7f6ea] text-[#1b9c85] rounded-xl py-6 text-center text-lg font-semibold cursor-pointer hover:bg-[#fffdef] hover:text-black transition-transform transform hover:scale-105 duration-300 shadow-md flex flex-col items-center gap-2">
               <Lottie
                 animationData={animation}
                 autoplay
