@@ -50,7 +50,7 @@ const LatestBlogs = () => {
   return (
     <section className="w-11/12 mx-auto py-40">
       {/* Section Title */}
-      <h2 className="text-3xl font-bold text-gray-800 text-center mb-10">
+      <h2 className="text-4xl font-bold text-gray-800 text-center mb-10">
         Latest Blogs
       </h2>
 
@@ -61,7 +61,7 @@ const LatestBlogs = () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="border border-green-300 bg-[#edf6ee] rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row h-40"
+              className="border border-green-200 bg-[#f3f8f4] rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col md:flex-row h-40"
             >
               {/* Image Left */}
               <img
@@ -94,12 +94,12 @@ const LatestBlogs = () => {
         <div className="bg-white shadow-md rounded-xl p-6 space-y-8">
           {/* Categories */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Categories</h3>
+            <h2 className="text-xl font-semibold mb-4">Categories</h2>
             <div className="flex flex-wrap gap-2">
               {categories.map((cat, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 bg-[#d1f3d5] text-[#1b9c85] rounded-full text-sm cursor-pointer hover:bg-[#1b9c85] hover:text-white transition"
+                  className="px-3 py-1 bg-[#e9f9ec] text-[#1b9c85] rounded-full text-sm cursor-pointer hover:bg-[#1b9c85] hover:text-white transition"
                 >
                   #{cat}
                 </span>
@@ -109,9 +109,9 @@ const LatestBlogs = () => {
 
           {/* Subscribe Newsletter */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">
+            <h2 className="text-lg font-semibold mb-4">
               Subscribe to Newsletter
-            </h3>
+            </h2>
             <form
               onSubmit={handleSubscribe}
               className="flex gap-2 flex-col sm:flex-row"
@@ -135,12 +135,12 @@ const LatestBlogs = () => {
 
           {/* Suggested Blogs */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Suggested Blogs</h3>
+            <h2 className="text-xl font-semibold mb-4">Suggested Blogs</h2>
             <ul className="space-y-2">
               {suggestedBlogs.map((blog, idx) => (
                 <li
                   key={idx}
-                  className="text-[#1b9c85] cursor-pointer hover:underline"
+                  className="text-[#1b9c85] cursor-pointer hover:underline font-grotesk text-sm"
                 >
                   {blog}
                 </li>
