@@ -78,7 +78,7 @@ const LatestBlogs = () => {
                   <p className="text-gray-500 text-xs mb-2">
                     By {blog.author} • {blog.date}
                   </p>
-                  <p className="text-gray-600 text-xs line-clamp-2">
+                  <p className="text-gray-700 text-xs line-clamp-2">
                     {blog.description}
                   </p>
                 </div>
