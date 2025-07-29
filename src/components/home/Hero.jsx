@@ -1,10 +1,20 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import CountUp from "react-countup";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import HeroImg from "../../assets/images/hero1.png";
 
 const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
+
+  // AOS Init
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   const stats = [
     { label: "Total Blogs", value: 1200, bg: "#fffdef" },
@@ -22,11 +32,9 @@ const Hero = () => {
       {/* Hero Section */}
       <section className="w-11/12 mx-auto pt-10 flex flex-col-reverse md:flex-row items-center md:justify-between gap-10 md:px-10">
         {/* Left Side - Text */}
-        <motion.div
+        <div
           className="md:w-1/2 text-center md:text-left space-y-6"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          data-aos="fade-right"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 font-alegreya">
             Discover Amazing <span className="text-[#1b9c85]">Blogs</span> on
@@ -41,6 +49,8 @@ const Hero = () => {
           <form
             onSubmit={handleSearch}
             className="flex items-center max-w-xs mx-auto md:mx-0 bg-transparent border border-gray-400 rounded-full px-4 py-2"
+            data-aos="zoom-in"
+            data-aos-delay="300"
           >
             <input
               type="text"
@@ -56,28 +66,21 @@ const Hero = () => {
               Search
             </button>
           </form>
-        </motion.div>
+        </div>
 
         {/* Right Side - Image */}
-        <motion.div
-          className="md:w-1/2 flex justify-center"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        <div className="md:w-1/2 flex justify-center" data-aos="fade-left">
           <img src={HeroImg} alt="Hero" className="max-w-lg w-full" />
-        </motion.div>
+        </div>
       </section>
 
       {/* Stats Counter */}
       <section className="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:-bottom-18 md:px-20 mt-10">
         {stats.map((stat, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
+            data-aos="flip-up"
+            data-aos-delay={index * 200}
             style={{ backgroundColor: stat.bg }}
             className="shadow-md rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
           >
@@ -85,7 +88,7 @@ const Hero = () => {
               <CountUp end={stat.value} duration={2} separator="," />
             </h2>
             <p className="text-gray-600 mt-2 text-lg">{stat.label}</p>
-          </motion.div>
+          </div>
         ))}
       </section>
     </div>
