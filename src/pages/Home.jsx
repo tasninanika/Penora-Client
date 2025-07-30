@@ -2,6 +2,7 @@ import Categories from "../components/home/Categories";
 import Hero from "../components/home/Hero";
 import LatestBlogs from "../components/home/LatestBlogs";
 import BgImg from "../assets/images/bg.jpg";
+import FeaturedAuthors from "../components/home/AuthorOfTheWeek";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
           <Categories></Categories>
         </div>
       </div>
+      <FeaturedAuthors></FeaturedAuthors>
     </div>
   );
 };
