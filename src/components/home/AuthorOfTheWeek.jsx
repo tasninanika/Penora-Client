@@ -1,8 +1,16 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import author1 from "../../assets/images/blog.jpg";
 import author2 from "../../assets/images/blog.jpg";
 import author3 from "../../assets/images/blog.jpg";
 
-const FeaturedAuthors = () => {
+const AuthorOfTheWeek = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   const authors = [
     {
       name: "Jarin Tasnin Anika",
@@ -29,7 +37,7 @@ const FeaturedAuthors = () => {
 
   return (
     <section className="w-11/12 mx-auto my-16">
-      <h2 className="text-3xl font-bold mb-10 text-center text-[#1b9c85]">
+      <h2 className="text-3xl font-bold mb-10 text-center" data-aos="fade-up">
         Top Authors of the Week
       </h2>
 
@@ -37,7 +45,9 @@ const FeaturedAuthors = () => {
         {authors.map((author, idx) => (
           <div
             key={idx}
-            className="bg-[#fdfcf5] p-6 rounded-xl text-center shadow-md hover:shadow-xl transition duration-300"
+            className="p-6 rounded-xl text-center hover:shadow-xl transition duration-300"
+            data-aos="zoom-in"
+            data-aos-delay={idx * 150} // staggered delay
           >
             <img
               src={author.image}
@@ -62,4 +72,4 @@ const FeaturedAuthors = () => {
   );
 };
 
-export default FeaturedAuthors;
+export default AuthorOfTheWeek;
