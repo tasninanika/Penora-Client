@@ -4,6 +4,7 @@ import LatestBlogs from "../components/home/LatestBlogs";
 import BgImg from "../assets/images/bg.jpg";
 import FeaturedAuthors from "../components/home/AuthorOfTheWeek";
 import AuthorOfTheWeek from "../components/home/AuthorOfTheWeek";
+import QuoteOfTheDay from "../components/home/QuoteOfTheDay";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         </div>
       </div>
       <AuthorOfTheWeek></AuthorOfTheWeek>
+      <QuoteOfTheDay></QuoteOfTheDay>
     </div>
   );
 };
