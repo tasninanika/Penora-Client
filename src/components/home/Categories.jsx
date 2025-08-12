@@ -8,7 +8,7 @@ import designAnimation from "../../assets/images/design.json";
 import lifestyleAnimation from "../../assets/images/life.json";
 import travelAnimation from "../../assets/images/travel.json";
 import financeAnimation from "../../assets/images/finance.json";
-import healthAnimation from "../../assets/images/technology.json";
+import healthAnimation from "../../assets/images/health.json";
 import foodAnimation from "../../assets/images/technology.json";
 import educationAnimation from "../../assets/images/technology.json";
 import aiAnimation from "../../assets/images/technology.json";
