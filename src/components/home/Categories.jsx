@@ -10,7 +10,7 @@ import travelAnimation from "../../assets/images/travel.json";
 import financeAnimation from "../../assets/images/finance.json";
 import healthAnimation from "../../assets/images/health.json";
 import foodAnimation from "../../assets/images/food.json";
-import educationAnimation from "../../assets/images/technology.json";
+import educationAnimation from "../../assets/images/education.json";
 import aiAnimation from "../../assets/images/technology.json";
 import programmingAnimation from "../../assets/images/technology.json";
 
