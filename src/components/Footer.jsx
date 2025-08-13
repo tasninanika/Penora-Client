@@ -9,7 +9,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#1b1b1b] text-gray-300 pt-12 pb-6 mt-16">
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">Penora</h2>
           <p className="text-sm leading-6">
@@ -18,7 +17,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
@@ -37,15 +35,9 @@ const Footer = () => {
                 About
               </a>
             </li>
-            <li>
-              <a href="/contact" className="hover:text-[#1b9c85]">
-                Contact
-              </a>
-            </li>
           </ul>
         </div>
 
-        {/* Categories */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Categories</h3>
           <ul className="space-y-2 text-sm">
@@ -72,7 +64,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Social Media */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
           <div className="flex gap-4">
@@ -104,7 +95,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom */}
       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm">
         © {new Date().getFullYear()} Penora. All rights reserved.
       </div>
