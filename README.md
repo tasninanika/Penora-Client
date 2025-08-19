@@ -1,54 +1,8 @@
-<h1 align="center">📝 Penora – A Modern Blog Platform</h1>
+# React + Vite
 
-<p align="center">
-  A clean, content-focused blogging experience — write, explore, and connect with the world.
-</p>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
-  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
-  <img src="https://img.shields.io/badge/DaisyUI-FF49DB?style=flat-square"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/React Router-DD0031?style=flat-square&logo=react-router&logoColor=white"/>
-  <img src="https://img.shields.io/badge/AuthProvider-React%20Context-61DAFB?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Context_API-React-61DAFB?style=flat-square&logo=react&logoColor=white" alt="React Context API" />
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
-</p>
+Currently, two official plugins are available:
 
----
-
-## 🧾 Overview
-
-**Penora** is a full-featured blog platform frontend designed with performance, clarity, and user engagement in mind. Penora provides a seamless interface for reading, writing, managing blogs, and exploring meaningful content.
-
----
-
-## ✨ Key Features
-
-### 🔍 For All Visitors
--  Home, About, and All Blogs pages
--  Blog Reading Page with reading progress bar
--  Filter by category, tags, author
--  Sort by popularity, comments, or latest
--  Toggle Dark / Light Mode
--  Social Sharing (Facebook, Twitter, Copy Link)
-
-### 🔐 For Registered Users
--  Write blog with rich text editor + cover image
--  Blog preview mode before publishing
--  Manage own blogs (edit/delete)
--  Like and 💬 Comment with edit/delete
--  Bookmark blogs to read later
--  View estimated reading time
--  View your comment history & liked blogs
--  Custom user profile with avatar and bio
-
-### 🛡️ For Admins
--  Dashboard with analytics (views, reads, likes, users)
--  Manage blogs (edit/delete/approve)
--  Manage users (ban/unban, promote/demote)
--  Approve or reject blog submissions
--  Blog performance insights
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

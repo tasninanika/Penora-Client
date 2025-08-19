@@ -1,24 +1,23 @@
-import Categories from "../components/home/Categories";
-import Hero from "../components/home/Hero";
-import LatestBlogs from "../components/home/LatestBlogs";
-import BgImg from "../assets/images/bg.jpg";
-import AuthorOfTheWeek from "../components/home/AuthorOfTheWeek";
-
+import Hero from "@/components/Hero";
+import RecentBlog from "@/components/RecentBlog";
+import PopularAuthors from "@/components/PopularAuthors";
+import BgImg from "../assets/bg.jpg";
+import Categories from "@/components/ui/Categories";
 const Home = () => {
   return (
-    <div>
-      <Hero></Hero>
+    <div className="pt-20">
+      <Hero />
       <div className="relative">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-10 -z-10"
+          className="absolute inset-0 bg-cover bg-center opacity-10 "
           style={{ backgroundImage: `url(${BgImg})` }}
         ></div>
         <div className="relative z-10">
-          <LatestBlogs></LatestBlogs>
+          <RecentBlog />
           <Categories></Categories>
         </div>
       </div>
-      <AuthorOfTheWeek></AuthorOfTheWeek>
+      <PopularAuthors />
     </div>
   );
 };

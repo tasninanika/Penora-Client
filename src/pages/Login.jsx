@@ -1,27 +1,30 @@
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "sonner";
+import { useDispatch } from "react-redux";
+import { setUser } from "@/redux/authSlice";
 import auth from "../assets/signin.json";
 import Lottie from "lottie-react";
 
-const Signup = () => {
+const Login = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState({
-    firstName: "",
-    lastName: "",
+  const dispatch = useDispatch();
+  const [input, setInput] = useState({
     email: "",
     password: "",
   });
 
+  const [showPassword, setShowPassword] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUser((prev) => ({
+    setInput((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -29,11 +32,10 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/v1/user/register`,
-        user,
+        `http://localhost:3000/api/v1/user/login`,
+        input,
         {
           headers: {
             "Content-Type": "application/json",
@@ -42,82 +44,57 @@ const Signup = () => {
         }
       );
       if (response.data.success) {
-        navigate("/login");
+        navigate("/");
+        dispatch(setUser(response.data.user));
         toast.success(response.data.message);
-      } else {
-        toast.error(response.data.message);
       }
     } catch (error) {
-      toast.error(error.response?.data?.message || "Something went wrong!");
+      toast.error(error.response?.data?.message || "Login failed");
     }
   };
 
-  const [showPassword, setShowPassword] = useState(false);
-
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center h-screen md:h-[760px] gap-6 md:pt-10 px-4">
-      {/* Lottie Animation */}
-      <div className="hidden md:flex justify-center items-center w-1/2">
-        <Lottie animationData={auth} className="h-[500px]" />
+    <div className="flex flex-col md:flex-row items-center justify-center md:pt-24 h-screen dark:bg-gray-900 px-4">
+      {/* Left Side Animation */}
+      <div className="hidden md:flex w-1/2 items-center justify-center">
+        <Lottie animationData={auth} loop={true} className="h-[500px]" />
       </div>
 
-      {/* Signup Card */}
-      <div className="flex justify-center items-center flex-1">
-        <Card className="w-full max-w-md p-6 rounded-2xl  dark:bg-gray-800 dark:border-gray-600">
+      {/* Right Side Login Card */}
+      <div className="flex w-full md:w-1/2 justify-center">
+        <Card className="w-full max-w-md p-6 dark:bg-gray-800 dark:border-gray-700 rounded-2xl">
           <CardHeader>
-            <CardTitle className="text-center text-2xl font-semibold font-grotesk">
-              Create an account
+            <CardTitle className="text-center text-3xl font-semibold font-grotesk">
+              Sign In
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <form className="space-y-4 font-alegreya" onSubmit={handleSubmit}>
-              <div className="flex flex-col md:flex-row gap-3">
-                <div className="flex-1">
-                  <Label>First Name</Label>
-                  <Input
-                    type="text"
-                    placeholder="First Name"
-                    name="firstName"
-                    value={user.firstName}
-                    onChange={handleChange}
-                    className="dark:border-gray-600 dark:bg-gray-900 mt-2"
-                  />
-                </div>
-
-                <div className="flex-1">
-                  <Label>Last Name</Label>
-                  <Input
-                    type="text"
-                    placeholder="Last Name"
-                    name="lastName"
-                    value={user.lastName}
-                    onChange={handleChange}
-                    className="dark:border-gray-600 dark:bg-gray-900 mt-2"
-                  />
-                </div>
-              </div>
-
+            <form className="space-y-5 font-alegreya" onSubmit={handleSubmit}>
+              {/* Email */}
               <div>
                 <Label>Email</Label>
                 <Input
                   type="email"
-                  placeholder="john.doe@example.com"
+                  placeholder="Enter your Email"
                   name="email"
-                  value={user.email}
+                  value={input.email}
                   onChange={handleChange}
                   className="dark:border-gray-600 dark:bg-gray-900 mt-2"
+                  required
                 />
               </div>
 
+              {/* Password */}
               <div className="relative">
                 <Label>Password</Label>
                 <Input
                   type={showPassword ? "text" : "password"}
-                  placeholder="Create a Password"
+                  placeholder="Enter Your Password"
                   name="password"
-                  value={user.password}
+                  value={input.password}
                   onChange={handleChange}
                   className="dark:border-gray-600 dark:bg-gray-900 mt-2"
+                  required
                 />
                 <button
                   type="button"
@@ -128,18 +105,20 @@ const Signup = () => {
                 </button>
               </div>
 
+              {/* Submit Button */}
               <Button
                 type="submit"
                 className="w-full rounded-full btn btn-outline border-[0.5px] border-green-600 bg-[#edf6ee] shadow-none text-black hover:text-white dark:hover:text-black"
               >
-                Sign Up
+                Login
               </Button>
 
+              {/* Redirect to Sign Up */}
               <p className="text-center text-gray-600 dark:text-gray-300">
-                Already have an account?{" "}
-                <Link to={"/login"}>
-                  <span className="cursor-pointer dark:hover:text-gray-100 text-green-600 font-medium hover:underline">
-                    Sign in
+                Don&apos;t have an account?{" "}
+                <Link to={"/signup"}>
+                  <span className="cursor-pointer text-green-600 font-medium hover:underline">
+                    Sign up
                   </span>
                 </Link>
               </p>
@@ -151,4 +130,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
