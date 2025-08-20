@@ -20,7 +20,7 @@ const Comments = () => {
   const getTotalComments = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/comment/my-blogs/comments`,
+        `https://penora-server.onrender.com/api/v1/comment/my-blogs/comments`,
         { withCredentials: true }
       );
       if (res.data.success) {

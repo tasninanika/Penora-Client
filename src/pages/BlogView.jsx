@@ -41,7 +41,7 @@ const BlogView = () => {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `http://localhost:3000/api/v1/blog/${selectedBlog._id}/${action}`,
+        `https://penora-server.onrender.com/api/v1/blog/${selectedBlog._id}/${action}`,
         { withCredentials: true }
       );
       if (res.data.success) {

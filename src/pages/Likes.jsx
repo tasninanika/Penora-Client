@@ -20,7 +20,7 @@ const Likes = () => {
   const getTotalLikes = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:3000/api/v1/blog/my-blogs/likes",
+        "https://penora-server.onrender.com/api/v1/blog/my-blogs/likes",
         { withCredentials: true }
       );
       if (res.data.success) {

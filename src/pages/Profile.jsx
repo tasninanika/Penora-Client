@@ -66,7 +66,7 @@ const Profile = () => {
     try {
       setLoading(true);
       const res = await axios.put(
-        "http://localhost:3000/api/v1/user/profile/update",
+        "https://penora-server.onrender.com/api/v1/user/profile/update",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

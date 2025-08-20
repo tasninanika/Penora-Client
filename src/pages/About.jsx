@@ -1,4 +1,4 @@
-import aboutImg from "../assets/Blogging1.json";
+import aboutImg from "../assets/blogging1.json";
 import BgImg from "../assets/bg.jpg";
 import Lottie from "lottie-react";
 

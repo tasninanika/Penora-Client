@@ -12,12 +12,12 @@ const PopularAuthors = () => {
       try {
         // Fetch all users
         const usersRes = await axios.get(
-          `http://localhost:3000/api/v1/user/all-users`
+          `https://penora-server.onrender.com/api/v1/user/all-users`
         );
 
         // Fetch all published blogs
         const blogsRes = await axios.get(
-          `http://localhost:3000/api/v1/blog/get-published-blogs`,
+          `https://penora-server.onrender.com/api/v1/blog/get-published-blogs`,
           { withCredentials: true }
         );
 
