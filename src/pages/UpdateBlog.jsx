@@ -71,7 +71,7 @@ const UpdateBlog = () => {
     try {
       setLoading(true);
       const res = await axios.put(
-        `https://penora-server.onrender.com/api/v1/blog/${id}`,
+        `https://penora-server-1.onrender.com/api/v1/blog/${id}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -92,7 +92,7 @@ const UpdateBlog = () => {
   const togglePublishUnpublish = async (action) => {
     try {
       const res = await axios.patch(
-        `https://penora-server.onrender.com/api/v1/blog/${id}`,
+        `https://penora-server-1.onrender.com/api/v1/blog/${id}`,
         {
           params: { action },
           withCredentials: true,
@@ -112,7 +112,7 @@ const UpdateBlog = () => {
   const deleteBlog = async () => {
     try {
       const res = await axios.delete(
-        `https://penora-server.onrender.com/api/v1/blog/delete/${id}`,
+        `https://penora-server-1.onrender.com/api/v1/blog/delete/${id}`,
         { withCredentials: true }
       );
       if (res.data.success) {

@@ -32,7 +32,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        `https://penora-server.onrender.com/api/v1/user/register`,
+        `https://penora-server-1.onrender.com/api/v1/user/register`,
         user,
         {
           headers: {

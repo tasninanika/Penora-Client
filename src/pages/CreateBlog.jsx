@@ -37,7 +37,7 @@ const CreateBlog = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        `https://penora-server.onrender.com/api/v1/blog/`,
+        `https://penora-server-1.onrender.com/api/v1/blog/`,
         { title, category },
         {
           headers: { "Content-Type": "application/json" },

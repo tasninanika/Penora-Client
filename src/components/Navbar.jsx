@@ -44,7 +44,7 @@ const Navbar = () => {
   const logoutHandler = async () => {
     try {
       const res = await axios.get(
-        `https://penora-server.onrender.com/api/v1/user/logout`,
+        `https://penora-server-1.onrender.com/api/v1/user/logout`,
         {
           withCredentials: true,
         }

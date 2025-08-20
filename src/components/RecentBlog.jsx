@@ -24,7 +24,7 @@ const RecentBlog = () => {
     const getAllPublsihedBlogs = async () => {
       try {
         const res = await axios.get(
-          `https://penora-server.onrender.com/api/v1/blog/get-published-blogs`,
+          `https://penora-server-1.onrender.com/api/v1/blog/get-published-blogs`,
           { withCredentials: true }
         );
         if (res.data.success) {

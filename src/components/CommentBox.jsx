@@ -46,7 +46,7 @@ const CommentBox = ({ selectedBlog }) => {
     const getAllCommentsOfBlog = async () => {
       try {
         const res = await axios.get(
-          `https://penora-server.onrender.com/api/v1/comment/${selectedBlog._id}/comment/all`
+          `https://penora-server-1.onrender.com/api/v1/comment/${selectedBlog._id}/comment/all`
         );
         dispatch(setComment(res.data.comments));
       } catch (error) {
@@ -62,7 +62,7 @@ const CommentBox = ({ selectedBlog }) => {
 
     try {
       const res = await axios.post(
-        `https://penora-server.onrender.com/api/v1/comment/${selectedBlog._id}/create`,
+        `https://penora-server-1.onrender.com/api/v1/comment/${selectedBlog._id}/create`,
         { content },
         {
           headers: { "Content-Type": "application/json" },
@@ -96,7 +96,7 @@ const CommentBox = ({ selectedBlog }) => {
 
     try {
       const res = await axios.post(
-        `https://penora-server.onrender.com/api/v1/comment/${commentId}/reply`,
+        `https://penora-server-1.onrender.com/api/v1/comment/${commentId}/reply`,
         { content: replyText },
         {
           headers: { "Content-Type": "application/json" },
@@ -125,7 +125,7 @@ const CommentBox = ({ selectedBlog }) => {
   const deleteComment = async (commentId) => {
     try {
       const res = await axios.delete(
-        `https://penora-server.onrender.com/api/v1/comment/${commentId}/delete`,
+        `https://penora-server-1.onrender.com/api/v1/comment/${commentId}/delete`,
         { withCredentials: true }
       );
 
@@ -146,7 +146,7 @@ const CommentBox = ({ selectedBlog }) => {
   const editCommentHandler = async (commentId) => {
     try {
       const res = await axios.put(
-        `https://penora-server.onrender.com/api/v1/comment/${commentId}/edit`,
+        `https://penora-server-1.onrender.com/api/v1/comment/${commentId}/edit`,
         { content: editedContent },
         {
           headers: { "Content-Type": "application/json" },
@@ -173,7 +173,7 @@ const CommentBox = ({ selectedBlog }) => {
   const likeCommentHandler = async (commentId) => {
     try {
       const res = await axios.get(
-        `https://penora-server.onrender.com/api/v1/comment/${commentId}/like`,
+        `https://penora-server-1.onrender.com/api/v1/comment/${commentId}/like`,
         { withCredentials: true }
       );
 
