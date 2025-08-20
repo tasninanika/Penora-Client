@@ -35,7 +35,6 @@ const Likes = () => {
     getTotalLikes();
   }, []);
 
-  // filter করে শুধু যেসব ব্লগে likes > 0 আছে সেগুলো রাখবো
   const filteredLikes = allLikes.filter((blog) => blog.likesCount > 0);
 
   return (
